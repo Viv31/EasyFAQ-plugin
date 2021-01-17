@@ -1,6 +1,6 @@
 <?php 
 /***
-* Plugin Name: Easy FAQ's
+* Plugin Name: Easy FAQ's Accordion
 * Plugin URI:
 * Description: plugin for making frequently asked question section by shortcode and accordian with easy manner.
 * Version:1.0
@@ -36,14 +36,19 @@
 	 content: "\2b";
 	 font-weight: bold;
 	  font-weight: bold;
+
       
 }
 /* if minus sign occure  */
  i.fa.fa-plus:before{
 	 content: "\2212";
-font-weight: bold;
+	font-weight: bold;
 	  font-weight: bold;
+	  float: right;
 	   
+}
+i.fa.fa-plus{
+	float: right!important;
 }
 </style>
 <?php
@@ -53,11 +58,11 @@ function EFAQ_section($attr){
 	//echo $i;
 
 	$options = shortcode_atts(array(
-	'question'=>'question goes here?',
+	'question'=> 'question goes here?',
 	'answer'=>'answer goews here'	
 	),$attr);
 
-$output_data ="<div id='accordion'><div class='card'><div class='card-header' id='headingOne' class='btn btn-primary' data-toggle='collapse' data-target='#collapseOne".$i."' aria-expanded='true' aria-controls='collapseOne'><i class='fa fa-plus'></i> ".$options['question']."</div>
+$output_data ="<div id='accordion'><div class='card'><div class='card-header' id='headingOne' class='btn btn-primary' data-toggle='collapse' data-target='#collapseOne".$i."' aria-expanded='true' aria-controls='collapseOne'> $i)&nbsp;".$options['question']."<i class='fa fa-plus'></i></div>
 <div id='collapseOne".$i."' class='collapse show' aria-labelledby='headingOne' data-parent='#accordion'>
       <div class='card-body'>
          ".$options['answer']."
