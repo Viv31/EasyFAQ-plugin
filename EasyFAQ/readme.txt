@@ -3,7 +3,7 @@ Contributors: vaibhav31gangrade
 Donate link: 
 Tags: FAQ,FAQ Shortcode,FAQ Plugin
 Requires at least: 4.6
-Tested up to: 5.5
+Tested up to: 5.6
 Stable tag: 5.2
 Requires PHP: 5.2.4
 License: GPLv2 or later
